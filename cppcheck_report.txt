@@ -1,0 +1,1835 @@
+src/cramfs/cramfsswap.c:253:28: style: Array index 'file' is used before limits check. [arrayIndexThenCheck]
+  for (file = 1; fileoffset[file] != filepos && file < filecnt; file++) ;
+                           ^
+src/cramfs/cramfsswap.c:137:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Filesystem contains %d files.\n", filecnt - 1);
+ ^
+src/cramfs/cramfsswap.c:27:111: style: The scope of the variable 'crc' can be reduced. [variableScope]
+ uint32_t superblock_in[16], superblock_out[16], flags, blockpointer_in, blockpointer_out, blockpointer_last, crc, *mapping;
+                                                                                                              ^
+src/cramfs/cramfsswap.c:31:50: style: The scope of the variable 'nblocks' can be reduced. [variableScope]
+ unsigned int filecnt, file, filepos, remaining, nblocks, copybytes, readbytes, x;
+                                                 ^
+src/cramfs/cramfsswap.c:31:59: style: The scope of the variable 'copybytes' can be reduced. [variableScope]
+ unsigned int filecnt, file, filepos, remaining, nblocks, copybytes, readbytes, x;
+                                                          ^
+src/cramfs/uncramfs.c:346:3: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  fprintf(f, "%s,%08x,%u,%u,%08x\n", name, mode, uid, gid, size);
+  ^
+src/cramfs/uncramfs.c:346:3: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  fprintf(f, "%s,%08x,%u,%u,%08x\n", name, mode, uid, gid, size);
+  ^
+src/cramfs/uncramfs.c:383:3: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  fprintf(f, "%s,%08x,%u,%u,%08x\n", name, mode, uid, gid, size);
+  ^
+src/cramfs/uncramfs.c:383:3: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  fprintf(f, "%s,%08x,%u,%u,%08x\n", name, mode, uid, gid, size);
+  ^
+src/cramfs/uncramfs.c:416:3: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  fprintf(f, "%s,%08x,%u,%u,%08x\n", name, mode, uid, gid, size);
+  ^
+src/cramfs/uncramfs.c:416:3: warning: %u in format string (no. 4) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  fprintf(f, "%s,%08x,%u,%u,%08x\n", name, mode, uid, gid, size);
+  ^
+src/epk.c:190:3: portability: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+  printf("Succesfully verified 0x%x out of 0x%x bytes\n", effectiveSignedSize, signSize);
+  ^
+src/epk.c:190:3: portability: %x in format string (no. 2) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+  printf("Succesfully verified 0x%x out of 0x%x bytes\n", effectiveSignedSize, signSize);
+  ^
+src/epk.c:130:6: style: The scope of the variable 'verified' can be reduced. [variableScope]
+ int verified;
+     ^
+src/epk.c:300:7: style: The scope of the variable 'result' can be reduced. [variableScope]
+  int result;
+      ^
+src/epk.c:203:11: portability: 'srcaddr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  srcaddr += AES_BLOCK_SIZE;
+          ^
+src/epk.c:204:11: portability: 'dstaddr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  dstaddr += AES_BLOCK_SIZE;
+          ^
+src/epk.c:209:13: style: Variable 'decrypted' is assigned a value that is never used. [unreadVariable]
+  decrypted = decrypted * AES_BLOCK_SIZE;
+            ^
+src/epk1.c:143:4: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   printf("\n#%u/%u saving PAK (name='%s', platform='%s', offset=0x%x, size='%d') to file %s\n", index + 1, epakHeader->pakCount, pakName, pakHeader->platform, pakRecord->offset, pakRecord->size, filename);
+   ^
+src/epk1.c:185:4: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   printf("\n#%u/%u saving PAK (name='%s', platform='%s', offset=0x%x, size='%d') to file %s\n", index + 1, epakHeader->pakCount, pakName, pakHeader->platform, pakRecord.offset, pakRecord.size, filename);
+   ^
+src/epk1.c:221:4: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   printf("\n#%u/%u saving PAK (name='%s', platform='%s', offset=0x%x, size='%d') to file %s\n", index + 1, epakHeader->pakCount, pakName, pakHeader->platform, pakRecord.offset, pakRecord.size, filename);
+   ^
+src/epk1.c:28:3: error: Resource leak: file [resourceLeak]
+  return 0;
+  ^
+src/epk1.c:150:86: warning: Either the condition 'outfile==NULL' is redundant or there is possible null pointer dereference: outfile. [nullPointerRedundantCheck]
+   fwrite(pakHeader->pakName + sizeof(struct pakHeader_t), 1, pakRecord->size - 132, outfile);
+                                                                                     ^
+src/epk1.c:146:16: note: Assuming that condition 'outfile==NULL' is not redundant
+   if (outfile == NULL) {
+               ^
+src/epk1.c:150:86: note: Null pointer dereference
+   fwrite(pakHeader->pakName + sizeof(struct pakHeader_t), 1, pakRecord->size - 132, outfile);
+                                                                                     ^
+src/epk1.c:151:11: warning: Either the condition 'outfile==NULL' is redundant or there is possible null pointer dereference: outfile. [nullPointerRedundantCheck]
+   fclose(outfile);
+          ^
+src/epk1.c:146:16: note: Assuming that condition 'outfile==NULL' is not redundant
+   if (outfile == NULL) {
+               ^
+src/epk1.c:151:11: note: Null pointer dereference
+   fclose(outfile);
+          ^
+src/epk1.c:192:85: warning: Either the condition 'outfile==NULL' is redundant or there is possible null pointer dereference: outfile. [nullPointerRedundantCheck]
+   fwrite(pakHeader->pakName + sizeof(struct pakHeader_t), 1, pakRecord.size - 132, outfile);
+                                                                                    ^
+src/epk1.c:188:16: note: Assuming that condition 'outfile==NULL' is not redundant
+   if (outfile == NULL) {
+               ^
+src/epk1.c:192:85: note: Null pointer dereference
+   fwrite(pakHeader->pakName + sizeof(struct pakHeader_t), 1, pakRecord.size - 132, outfile);
+                                                                                    ^
+src/epk1.c:193:11: warning: Either the condition 'outfile==NULL' is redundant or there is possible null pointer dereference: outfile. [nullPointerRedundantCheck]
+   fclose(outfile);
+          ^
+src/epk1.c:188:16: note: Assuming that condition 'outfile==NULL' is not redundant
+   if (outfile == NULL) {
+               ^
+src/epk1.c:193:11: note: Null pointer dereference
+   fclose(outfile);
+          ^
+src/epk1.c:228:87: warning: Either the condition 'outfile==NULL' is redundant or there is possible null pointer dereference: outfile. [nullPointerRedundantCheck]
+   fwrite(pakHeader->pakName + sizeof(struct pakHeader_t), 1, pakHeader->pakSize + 4, outfile);
+                                                                                      ^
+src/epk1.c:224:16: note: Assuming that condition 'outfile==NULL' is not redundant
+   if (outfile == NULL) {
+               ^
+src/epk1.c:228:87: note: Null pointer dereference
+   fwrite(pakHeader->pakName + sizeof(struct pakHeader_t), 1, pakHeader->pakSize + 4, outfile);
+                                                                                      ^
+src/epk1.c:229:11: warning: Either the condition 'outfile==NULL' is redundant or there is possible null pointer dereference: outfile. [nullPointerRedundantCheck]
+   fclose(outfile);
+          ^
+src/epk1.c:224:16: note: Assuming that condition 'outfile==NULL' is not redundant
+   if (outfile == NULL) {
+               ^
+src/epk1.c:229:11: note: Null pointer dereference
+   fclose(outfile);
+          ^
+src/epk1.c:96:52: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  printf("\nFirmware otaID: %s\n", (char *)(buffer + epakHeader->offset + 8));
+                                                   ^
+src/epk1.c:98:42: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  struct epk1BEVersion_t *fwVer = buffer + epakHeader->offset - 4;
+                                         ^
+src/epk1.c:115:29: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   memcpy(pakRecord, buffer + offset, sizeof(struct pakRec_t)); //copy pakRecord to buffer
+                            ^
+src/epk1.c:126:28: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   memcpy(pheader, (buffer + pakRecord->offset), sizeof(struct pakHeader_t));
+                           ^
+src/epk1.c:129:46: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   pakHeader = (struct pakHeader_t *)(buffer + pakRecord->offset);
+                                             ^
+src/epk1.c:171:46: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   pakHeader = (struct pakHeader_t *)(buffer + pakRecord.offset);
+                                             ^
+src/epk1.c:207:66: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   struct pakHeader_t *pakHeader = (struct pakHeader_t *)(buffer + pakRecord.offset);
+                                                                 ^
+src/epk2.c:259:4: portability: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+   printf(" platform='%s', offset='0x%x', size='%u bytes', ",
+   ^
+src/epk2.c:109:9: style: Variable 'result' is reassigned a value before the old one has been used. [redundantAssignment]
+ result = wrap_decryptimage(
+        ^
+src/epk2.c:94:10: note: result is assigned
+  result = wrap_verifyimage(
+         ^
+src/epk2.c:109:9: note: result is overwritten
+ result = wrap_decryptimage(
+        ^
+src/epk2.c:152:12: style: The scope of the variable 'pakLoc' can be reduced. [variableScope]
+ uintptr_t pakLoc;
+           ^
+src/epk2.c:160:24: style: The scope of the variable 'segCount' can be reduced. [variableScope]
+  unsigned int curSeg, segCount;
+                       ^
+src/epk2.c:209:8: style: Local variable 'result' shadows outer variable [shadowVariable]
+   int result = wrap_decryptimage(
+       ^
+src/epk2.c:78:6: note: Shadowed declaration
+ int result;
+     ^
+src/epk2.c:209:8: note: Shadow variable
+   int result = wrap_decryptimage(
+       ^
+src/epk2.c:56:20: style: Variable 'has_versions' is assigned a value that is never used. [unreadVariable]
+ bool has_versions = false;
+                   ^
+src/epk3.c:252:4: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+   printf("Warning: Unexpected packageInfoSize '%d', expected '%d'\n",
+   ^
+src/epk3.c:318:6: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+     printf("Warning: Decrypted segment doesn't match expected index! (index: %d, expected: %d)\n",
+     ^
+src/jffs2/jffs2extract.cpp:575:5: portability: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+    printf("region(0x00) = 0x%x\n", empty_fsdata_sz);
+    ^
+src/jffs2/jffs2extract.cpp:591:5: portability: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+    printf("region(0xFF) = 0x%x\n", empty_esblks_sz);
+    ^
+src/jffs2/jffs2extract.cpp:731:7: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+      printf("  ** data uncompress failed! (%u =! %u)\n", extracted_size, uncompr_size);
+      ^
+src/jffs2/jffs2extract.cpp:731:7: warning: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+      printf("  ** data uncompress failed! (%u =! %u)\n", extracted_size, uncompr_size);
+      ^
+src/jffs2/jffs2extract.cpp:300:17: style: Class 'nodedata_s' is unsafe, 'nodedata_s::data' can leak by wrong usage. [unsafeClassCanLeak]
+ unsigned char *data;
+                ^
+src/jffs2/jffs2extract.cpp:124:25: style: The scope of the variable 'result' can be reduced. [variableScope]
+ register unsigned long result;
+                        ^
+src/jffs2/jffs2extract.cpp:125:25: style: Local variable 'p' shadows outer variable [shadowVariable]
+ register unsigned long p;
+                        ^
+src/jffs2/jffs2extract.cpp:71:24: note: Shadowed declaration
+static CLzmaEncHandle *p;
+                       ^
+src/jffs2/jffs2extract.cpp:125:25: note: Shadow variable
+ register unsigned long p;
+                        ^
+src/jffs2/jffs2extract.cpp:334:37: performance: Function parameter 'root' should be passed by const reference. [passedByValue]
+void do_list(int inode, std::string root = "") {
+                                    ^
+src/jffs2/jffs2extract.cpp:494:20: style: Variable 'child' can be declared with const [constVariable]
+ std::list < int >&child = childs[inode];
+                   ^
+src/jffs2/mini_inflate.cpp:192:19: style: The scope of the variable 'length' can be reduced. [variableScope]
+ int code = 0, i, length;
+                  ^
+src/lz4/bench.c:342:16: style: The scope of the variable 'nb_loops' can be reduced. [variableScope]
+   int loopNb, nb_loops, chunkNb;
+               ^
+src/lz4/bench.c:344:8: style: The scope of the variable 'milliTime' can be reduced. [variableScope]
+   int milliTime;
+       ^
+src/lz4/bench.c:258:29: style: Variable 'compP.compressionFunction' is assigned a value that is never used. [unreadVariable]
+  compP.compressionFunction = COMPRESSOR0;
+                            ^
+src/lz4/bench.c:263:29: style: Variable 'compP.compressionFunction' is assigned a value that is never used. [unreadVariable]
+  compP.compressionFunction = COMPRESSOR1;
+                            ^
+src/lz4/bench.c:267:29: style: Variable 'compP.compressionFunction' is assigned a value that is never used. [unreadVariable]
+  compP.compressionFunction = DEFAULTCOMPRESSOR;
+                            ^
+src/lz4/bench.c:269:30: style: Variable 'compP.decompressionFunction' is assigned a value that is never used. [unreadVariable]
+ compP.decompressionFunction = LZ4_uncompress;
+                             ^
+src/lz4/lz4.c:243:8: style: struct member 'refTables::hashTable' is never used. [unusedStructMember]
+ HTYPE hashTable[HASHTABLESIZE];
+       ^
+src/lz4/lz4.c:293:38: style: Opposite expression on both sides of '&'. [oppositeExpression]
+ return DeBruijnBytePos[((U64) ((val & -val) * 0x0218A392CDABBD3F)) >> 58];
+                                     ^
+src/lz4/lz4demo.c:311:4: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+   printf("Uncompress error. n:%d, res:%X, nextSize:%X\n", n, res, nextSize);
+   ^
+src/lz4/lz4demo.c:286:3: error: Memory leak: in_buff [memleak]
+  return -1;
+  ^
+src/lz4/lz4demo.c:286:3: error: Memory leak: out_buff [memleak]
+  return -1;
+  ^
+src/lz4/lz4demo.c:286:3: error: Memory leak: sizesTable [memleak]
+  return -1;
+  ^
+src/lz4/lz4demo.c:280:11: style: The scope of the variable 'nextSize' can be reduced. [variableScope]
+ uint32_t nextSize;
+          ^
+src/lz4/lz4hc.c:245:38: style: Opposite expression on both sides of '&'. [oppositeExpression]
+ return DeBruijnBytePos[((U64) ((val & -val) * 0x0218A392CDABBD3F)) >> 58];
+                                     ^
+src/lzhs/lzhs.c:139:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (i >= ctx->match_length) {
+        ^
+src/lzhs/lzhs.c:133:9: note: First condition
+  if (i >= ctx->match_length) {
+        ^
+src/lzhs/lzhs.c:139:9: note: Second condition
+  if (i >= ctx->match_length) {
+        ^
+src/lzhs/lzhs.c:336:16: style: Variable 'ctx->k' is reassigned a value before the old one has been used. [redundantAssignment]
+   for (ctx->k = 0; ctx->k < 7; ctx->k++)
+               ^
+src/lzhs/lzhs.c:332:12: note: ctx->k is assigned
+    ctx->k = -1;
+           ^
+src/lzhs/lzhs.c:336:16: note: ctx->k is overwritten
+   for (ctx->k = 0; ctx->k < 7; ctx->k++)
+               ^
+src/lzhs/lzhs.c:70:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i, p, cmp = 1, tmp = 0;
+     ^
+src/lzhs/lzhs.c:70:9: style: The scope of the variable 'p' can be reduced. [variableScope]
+ int i, p, cmp = 1, tmp = 0;
+        ^
+src/lzhs/lzhs.c:70:12: style: The scope of the variable 'cmp' can be reduced. [variableScope]
+ int i, p, cmp = 1, tmp = 0;
+           ^
+src/lzhs/lzhs.c:201:11: style: The scope of the variable 'tmpno' can be reduced. [variableScope]
+ uint32_t tmpno, tmpcode;
+          ^
+src/lzhs/lzhs.c:201:18: style: The scope of the variable 'tmpcode' can be reduced. [variableScope]
+ uint32_t tmpno, tmpcode;
+                 ^
+src/lzhs/lzhs.c:369:23: style: The scope of the variable 'last_match_length' can be reduced. [variableScope]
+ int c, i, len, r, s, last_match_length, code_buf_ptr;
+                      ^
+src/lzhs/lzhs.c:312:14: style: Local variable 'key' shadows outer variable [shadowVariable]
+    uint32_t key = key_charpos(ctx->code, ctx->len);
+             ^
+src/lzhs/lzhs.c:284:12: note: Shadowed declaration
+  uint32_t key = key_charlen(ctx->code, ctx->len);
+           ^
+src/lzhs/lzhs.c:312:14: note: Shadow variable
+    uint32_t key = key_charpos(ctx->code, ctx->len);
+             ^
+src/lzhs/lzhs_lib.c:181:2: warning: Return value of function freopen() is not used. [ignoredReturnValue]
+ freopen(outpath, "rb", in);
+ ^
+src/lzhs/lzhs_lib.c:189:2: warning: Return value of function freopen() is not used. [ignoredReturnValue]
+ freopen(outpath, "wb", out);
+ ^
+src/lzhs/lzhs_lib.c:198:2: warning: Return value of function freopen() is not used. [ignoredReturnValue]
+ freopen(outpath, "rb", in);
+ ^
+src/lzhs/lzhs_lib.c:203:2: warning: Return value of function freopen() is not used. [ignoredReturnValue]
+ freopen(outfile, "wb", out);
+ ^
+src/lzhs/lzhs_lib.c:111:4: error: Resource leak: infile [resourceLeak]
+   return 1;
+   ^
+src/lzhs/lzhs_lib.c:181:2: error: Return value of allocation function 'freopen' is not stored. [leakReturnValNotUsed]
+ freopen(outpath, "rb", in);
+ ^
+src/lzhs/lzhs_lib.c:189:2: error: Return value of allocation function 'freopen' is not stored. [leakReturnValNotUsed]
+ freopen(outpath, "wb", out);
+ ^
+src/lzhs/lzhs_lib.c:198:2: error: Return value of allocation function 'freopen' is not stored. [leakReturnValNotUsed]
+ freopen(outpath, "rb", in);
+ ^
+src/lzhs/lzhs_lib.c:203:2: error: Return value of allocation function 'freopen' is not stored. [leakReturnValNotUsed]
+ freopen(outfile, "wb", out);
+ ^
+src/lzhs/lzhs_lib.c:161:8: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ fseek(in, 0, SEEK_END);
+       ^
+src/lzhs/lzhs_lib.c:182:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:161:8: note: Null pointer dereference
+ fseek(in, 0, SEEK_END);
+       ^
+src/lzhs/lzhs_lib.c:162:16: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ fsize = ftell(in);
+               ^
+src/lzhs/lzhs_lib.c:182:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:162:16: note: Null pointer dereference
+ fsize = ftell(in);
+               ^
+src/lzhs/lzhs_lib.c:163:9: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ rewind(in);
+        ^
+src/lzhs/lzhs_lib.c:182:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:163:9: note: Null pointer dereference
+ rewind(in);
+        ^
+src/lzhs/lzhs_lib.c:166:23: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ fread(buf, 1, fsize, in);
+                      ^
+src/lzhs/lzhs_lib.c:182:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:166:23: note: Null pointer dereference
+ fread(buf, 1, fsize, in);
+                      ^
+src/lzhs/lzhs_lib.c:167:9: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ rewind(in);
+        ^
+src/lzhs/lzhs_lib.c:182:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:167:9: note: Null pointer dereference
+ rewind(in);
+        ^
+src/lzhs/lzhs_lib.c:176:24: warning:inconclusive: Either the condition '!out' is redundant or there is possible null pointer dereference: out. [nullPointerRedundantCheck]
+ fwrite(buf, 1, fsize, out);
+                       ^
+src/lzhs/lzhs_lib.c:193:6: note: Assuming that condition '!out' is not redundant
+ if (!out) {
+     ^
+src/lzhs/lzhs_lib.c:176:24: note: Null pointer dereference
+ fwrite(buf, 1, fsize, out);
+                       ^
+src/lzhs/lzhs_lib.c:181:25: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ freopen(outpath, "rb", in);
+                        ^
+src/lzhs/lzhs_lib.c:182:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:181:25: note: Null pointer dereference
+ freopen(outpath, "rb", in);
+                        ^
+src/lzhs/lzhs_lib.c:189:25: warning:inconclusive: Either the condition '!out' is redundant or there is possible null pointer dereference: out. [nullPointerRedundantCheck]
+ freopen(outpath, "wb", out);
+                        ^
+src/lzhs/lzhs_lib.c:193:6: note: Assuming that condition '!out' is not redundant
+ if (!out) {
+     ^
+src/lzhs/lzhs_lib.c:189:25: note: Null pointer dereference
+ freopen(outpath, "wb", out);
+                        ^
+src/lzhs/lzhs_lib.c:198:25: warning: Either the condition '!in' is redundant or there is possible null pointer dereference: in. [nullPointerRedundantCheck]
+ freopen(outpath, "rb", in);
+                        ^
+src/lzhs/lzhs_lib.c:199:6: note: Assuming that condition '!in' is not redundant
+ if (!in) {
+     ^
+src/lzhs/lzhs_lib.c:198:25: note: Null pointer dereference
+ freopen(outpath, "rb", in);
+                        ^
+src/lzhs/lzhs_lib.c:203:25: warning: Either the condition '!out' is redundant or there is possible null pointer dereference: out. [nullPointerRedundantCheck]
+ freopen(outfile, "wb", out);
+                        ^
+src/lzhs/lzhs_lib.c:204:6: note: Assuming that condition '!out' is not redundant
+ if (!out) {
+     ^
+src/lzhs/lzhs_lib.c:203:25: note: Null pointer dereference
+ freopen(outfile, "wb", out);
+                        ^
+src/lzhs/lzhs_lib.c:76:6: style: The scope of the variable 'input_filesize' can be reduced. [variableScope]
+ int input_filesize;
+     ^
+src/lzhs/lzhs_lib.c:77:9: style: The scope of the variable 'n' can be reduced. [variableScope]
+ size_t n;
+        ^
+src/lzhs/lzhs_lib.c:78:8: style: The scope of the variable 'ptr' can be reduced. [variableScope]
+ char *ptr;
+       ^
+src/lzhs/lzhs_lib.c:79:17: style: The scope of the variable 'outfile' can be reduced. [variableScope]
+ FILE *infile, *outfile;
+                ^
+src/lzhs/lzhs_lib.c:91:11: style: Checking if unsigned expression 'n' is less than zero. [unsignedLessThanZero]
+    if (n <= 0)
+          ^
+src/lzma/LzFind.c:489:22: error: Uninitialized variable: hashValue [uninitvar]
+  curMatch = p->hash[hashValue];
+                     ^
+src/lzma/LzFind.c:500:22: error: Uninitialized variable: hashValue [uninitvar]
+  curMatch = p->hash[hashValue];
+                     ^
+src/lzma/LzFind.c:513:29: error: Uninitialized variable: hash2Value [uninitvar]
+  delta2 = p->pos - p->hash[hash2Value];
+                            ^
+src/lzma/LzFind.c:514:38: error: Uninitialized variable: hashValue [uninitvar]
+  curMatch = p->hash[kFix3HashSize + hashValue];
+                                     ^
+src/lzma/LzFind.c:546:45: error: Uninitialized variable: hash2Value [uninitvar]
+  delta2 = p->pos - p->hash[                hash2Value];
+                                            ^
+src/lzma/LzFind.c:547:45: error: Uninitialized variable: hash3Value [uninitvar]
+  delta3 = p->pos - p->hash[kFix3HashSize + hash3Value];
+                                            ^
+src/lzma/LzFind.c:548:38: error: Uninitialized variable: hashValue [uninitvar]
+  curMatch = p->hash[kFix4HashSize + hashValue];
+                                     ^
+src/lzma/LzFind.c:593:45: error: Uninitialized variable: hash2Value [uninitvar]
+  delta2 = p->pos - p->hash[                hash2Value];
+                                            ^
+src/lzma/LzFind.c:594:45: error: Uninitialized variable: hash3Value [uninitvar]
+  delta3 = p->pos - p->hash[kFix3HashSize + hash3Value];
+                                            ^
+src/lzma/LzFind.c:595:38: error: Uninitialized variable: hashValue [uninitvar]
+  curMatch = p->hash[kFix4HashSize + hashValue];
+                                     ^
+src/lzma/LzFind.c:640:22: error: Uninitialized variable: hashValue [uninitvar]
+  curMatch = p->hash[hashValue];
+                     ^
+src/lzma/LzFind.c:653:24: error: Uninitialized variable: hashValue [uninitvar]
+    curMatch = p->hash[hashValue];
+                       ^
+src/lzma/LzFind.c:666:24: error: Uninitialized variable: hashValue [uninitvar]
+    curMatch = p->hash[hashValue];
+                       ^
+src/lzma/LzFind.c:681:13: error: Uninitialized variable: hash2Value [uninitvar]
+    p->hash[hash2Value] =
+            ^
+src/lzma/LzFind.c:680:40: error: Uninitialized variable: hashValue [uninitvar]
+    curMatch = p->hash[kFix3HashSize + hashValue];
+                                       ^
+src/lzma/LzFind.c:696:29: error: Uninitialized variable: hash2Value [uninitvar]
+    p->hash[                hash2Value] =
+                            ^
+src/lzma/LzFind.c:697:29: error: Uninitialized variable: hash3Value [uninitvar]
+    p->hash[kFix3HashSize + hash3Value] = p->pos;
+                            ^
+src/lzma/LzFind.c:695:40: error: Uninitialized variable: hashValue [uninitvar]
+    curMatch = p->hash[kFix4HashSize + hashValue];
+                                       ^
+src/lzma/LzFind.c:712:29: error: Uninitialized variable: hash2Value [uninitvar]
+    p->hash[                hash2Value] =
+                            ^
+src/lzma/LzFind.c:713:29: error: Uninitialized variable: hash3Value [uninitvar]
+    p->hash[kFix3HashSize + hash3Value] =
+                            ^
+src/lzma/LzFind.c:711:40: error: Uninitialized variable: hashValue [uninitvar]
+    curMatch = p->hash[kFix4HashSize + hashValue];
+                                       ^
+src/lzma/LzFind.c:727:24: error: Uninitialized variable: hashValue [uninitvar]
+    curMatch = p->hash[hashValue];
+                       ^
+src/lzma/LzFind.c:487:3: style: Variable 'cur' is assigned a value that is never used. [unreadVariable]
+  GET_MATCHES_HEADER(2)
+  ^
+src/lzma/LzFind.c:487:3: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+  GET_MATCHES_HEADER(2)
+  ^
+src/lzma/LzFind.c:498:3: style: Variable 'cur' is assigned a value that is never used. [unreadVariable]
+  GET_MATCHES_HEADER(3)
+  ^
+src/lzma/LzFind.c:498:3: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+  GET_MATCHES_HEADER(3)
+  ^
+src/lzma/LzFind.c:508:10: style: Variable 'hash2Value' is not assigned a value. [unassignedVariable]
+  UInt32 hash2Value, delta2, maxLen, offset;
+         ^
+src/lzma/LzFind.c:509:3: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+  GET_MATCHES_HEADER(3)
+  ^
+src/lzma/LzFind.c:541:10: style: Variable 'hash2Value' is not assigned a value. [unassignedVariable]
+  UInt32 hash2Value, hash3Value, delta2, delta3, maxLen, offset;
+         ^
+src/lzma/LzFind.c:541:22: style: Variable 'hash3Value' is not assigned a value. [unassignedVariable]
+  UInt32 hash2Value, hash3Value, delta2, delta3, maxLen, offset;
+                     ^
+src/lzma/LzFind.c:542:3: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+  GET_MATCHES_HEADER(4)
+  ^
+src/lzma/LzFind.c:588:10: style: Variable 'hash2Value' is not assigned a value. [unassignedVariable]
+  UInt32 hash2Value, hash3Value, delta2, delta3, maxLen, offset;
+         ^
+src/lzma/LzFind.c:588:22: style: Variable 'hash3Value' is not assigned a value. [unassignedVariable]
+  UInt32 hash2Value, hash3Value, delta2, delta3, maxLen, offset;
+                     ^
+src/lzma/LzFind.c:589:3: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+  GET_MATCHES_HEADER(4)
+  ^
+src/lzma/LzFind.c:638:3: style: Variable 'cur' is assigned a value that is never used. [unreadVariable]
+  GET_MATCHES_HEADER(3)
+  ^
+src/lzma/LzFind.c:638:3: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+  GET_MATCHES_HEADER(3)
+  ^
+src/lzma/LzFind.c:651:5: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+    SKIP_HEADER(2)
+    ^
+src/lzma/LzFind.c:664:5: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+    SKIP_HEADER(3)
+    ^
+src/lzma/LzFind.c:677:12: style: Variable 'hash2Value' is not assigned a value. [unassignedVariable]
+    UInt32 hash2Value;
+           ^
+src/lzma/LzFind.c:678:5: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+    SKIP_HEADER(3)
+    ^
+src/lzma/LzFind.c:692:12: style: Variable 'hash2Value' is not assigned a value. [unassignedVariable]
+    UInt32 hash2Value, hash3Value;
+           ^
+src/lzma/LzFind.c:692:24: style: Variable 'hash3Value' is not assigned a value. [unassignedVariable]
+    UInt32 hash2Value, hash3Value;
+                       ^
+src/lzma/LzFind.c:693:5: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+    SKIP_HEADER(4)
+    ^
+src/lzma/LzFind.c:708:12: style: Variable 'hash2Value' is not assigned a value. [unassignedVariable]
+    UInt32 hash2Value, hash3Value;
+           ^
+src/lzma/LzFind.c:708:24: style: Variable 'hash3Value' is not assigned a value. [unassignedVariable]
+    UInt32 hash2Value, hash3Value;
+                       ^
+src/lzma/LzFind.c:709:5: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+    SKIP_HEADER(4)
+    ^
+src/lzma/LzFind.c:725:5: style: Variable 'hashValue' is not assigned a value. [unassignedVariable]
+    SKIP_HEADER(3)
+    ^
+src/lzma/LzmaDec.c:262:18: style: Local variable 'limit' shadows outer argument [shadowArgument]
+        unsigned limit, offset;
+                 ^
+src/lzma/LzmaDec.c:131:63: note: Shadowed declaration
+static int MY_FAST_CALL LzmaDec_DecodeReal(CLzmaDec *p, SizeT limit, const Byte *bufLimit)
+                                                              ^
+src/lzma/LzmaDec.c:262:18: note: Shadow variable
+        unsigned limit, offset;
+                 ^
+src/lzma/LzmaDec.c:564:13: style: Variable 'range' is assigned a value that is never used. [unreadVariable]
+            NORMALIZE_CHECK;
+            ^
+src/lzma/LzmaDec.c:564:13: style: Variable 'code' is assigned a value that is never used. [unreadVariable]
+            NORMALIZE_CHECK;
+            ^
+src/lzma/LzmaDec.c:673:3: style: Variable 'range' is assigned a value that is never used. [unreadVariable]
+  NORMALIZE_CHECK;
+  ^
+src/lzma/LzmaDec.c:673:3: style: Variable 'code' is assigned a value that is never used. [unreadVariable]
+  NORMALIZE_CHECK;
+  ^
+src/lzma/LzmaEnc.c:835:24: warning: Either the condition 'numPairs>0' is redundant or the array 'p->matches[549]' is accessed at index -1, which is out of bounds. [negativeIndex]
+    lenRes = p->matches[numPairs - 2];
+                       ^
+src/lzma/LzmaEnc.c:833:16: note: Assuming that condition 'numPairs>0' is not redundant
+  if (numPairs > 0)
+               ^
+src/lzma/LzmaEnc.c:835:24: note: Negative array index
+    lenRes = p->matches[numPairs - 2];
+                       ^
+src/lzma/LzmaEnc.c:1415:68: warning: Either the condition 'lenTest2>=2' is redundant or the array 'p->lenEnc.prices[16][272]' is accessed at index p->lenEnc.prices[*][-1], which is out of bounds. [negativeIndex]
+        UInt32 curAndLenPrice = normalMatchPrice + p->lenEnc.prices[posState][lenTest - LZMA_MATCH_LEN_MIN];
+                                                                   ^
+src/lzma/LzmaEnc.c:1443:24: note: Assuming that condition 'lenTest2>=2' is not redundant
+          if (lenTest2 >= 2)
+                       ^
+src/lzma/LzmaEnc.c:1442:31: note: Assignment to 'lenTest2-=lenTest+1'
+          lenTest2 -= lenTest + 1;
+                              ^
+src/lzma/LzmaEnc.c:1415:68: note: Negative array index
+        UInt32 curAndLenPrice = normalMatchPrice + p->lenEnc.prices[posState][lenTest - LZMA_MATCH_LEN_MIN];
+                                                                   ^
+src/lzma/LzmaEnc.c:2084:6: warning: Redundant assignment of 'pp' to itself. [selfAssignment]
+  pp = pp;
+     ^
+src/lzma/LzmaEnc.c:1129:34: style: Local variable 'numPairs' shadows outer variable [shadowVariable]
+    UInt32 numAvailFull, newLen, numPairs, posPrev, state, posState, startLen;
+                                 ^
+src/lzma/LzmaEnc.c:934:29: note: Shadowed declaration
+  UInt32 numAvail, mainLen, numPairs, repMaxIndex, i, posState, lenEnd, len, cur;
+                            ^
+src/lzma/LzmaEnc.c:1129:34: note: Shadow variable
+    UInt32 numAvailFull, newLen, numPairs, posPrev, state, posState, startLen;
+                                 ^
+src/lzma/LzmaEnc.c:1129:60: style: Local variable 'posState' shadows outer variable [shadowVariable]
+    UInt32 numAvailFull, newLen, numPairs, posPrev, state, posState, startLen;
+                                                           ^
+src/lzma/LzmaEnc.c:934:55: note: Shadowed declaration
+  UInt32 numAvail, mainLen, numPairs, repMaxIndex, i, posState, lenEnd, len, cur;
+                                                      ^
+src/lzma/LzmaEnc.c:1129:60: note: Shadow variable
+    UInt32 numAvailFull, newLen, numPairs, posPrev, state, posState, startLen;
+                                                           ^
+src/lzma/LzmaEnc.c:1130:36: style: Local variable 'matchPrice' shadows outer variable [shadowVariable]
+    UInt32 curPrice, curAnd1Price, matchPrice, repMatchPrice;
+                                   ^
+src/lzma/LzmaEnc.c:935:10: note: Shadowed declaration
+  UInt32 matchPrice, repMatchPrice, normalMatchPrice;
+         ^
+src/lzma/LzmaEnc.c:1130:36: note: Shadow variable
+    UInt32 curPrice, curAnd1Price, matchPrice, repMatchPrice;
+                                   ^
+src/lzma/LzmaEnc.c:1130:48: style: Local variable 'repMatchPrice' shadows outer variable [shadowVariable]
+    UInt32 curPrice, curAnd1Price, matchPrice, repMatchPrice;
+                                               ^
+src/lzma/LzmaEnc.c:935:22: note: Shadowed declaration
+  UInt32 matchPrice, repMatchPrice, normalMatchPrice;
+                     ^
+src/lzma/LzmaEnc.c:1130:48: note: Shadow variable
+    UInt32 curPrice, curAnd1Price, matchPrice, repMatchPrice;
+                                               ^
+src/lzma/LzmaEnc.c:1132:10: style: Local variable 'curByte' shadows outer variable [shadowVariable]
+    Byte curByte, matchByte;
+         ^
+src/lzma/LzmaEnc.c:939:8: note: Shadowed declaration
+  Byte curByte, matchByte;
+       ^
+src/lzma/LzmaEnc.c:1132:10: note: Shadow variable
+    Byte curByte, matchByte;
+         ^
+src/lzma/LzmaEnc.c:1132:19: style: Local variable 'matchByte' shadows outer variable [shadowVariable]
+    Byte curByte, matchByte;
+                  ^
+src/lzma/LzmaEnc.c:939:17: note: Shadowed declaration
+  Byte curByte, matchByte;
+                ^
+src/lzma/LzmaEnc.c:1132:19: note: Shadow variable
+    Byte curByte, matchByte;
+                  ^
+src/lzma/LzmaEnc.c:1133:17: style: Local variable 'data' shadows outer variable [shadowVariable]
+    const Byte *data;
+                ^
+src/lzma/LzmaEnc.c:938:15: note: Shadowed declaration
+  const Byte *data;
+              ^
+src/lzma/LzmaEnc.c:1133:17: note: Shadow variable
+    const Byte *data;
+                ^
+src/lzma/LzmaEnc.c:1196:16: style: Local variable 'i' shadows outer variable [shadowVariable]
+        UInt32 i;
+               ^
+src/lzma/LzmaEnc.c:934:52: note: Shadowed declaration
+  UInt32 numAvail, mainLen, numPairs, repMaxIndex, i, posState, lenEnd, len, cur;
+                                                   ^
+src/lzma/LzmaEnc.c:1196:16: note: Shadow variable
+        UInt32 i;
+               ^
+src/lzma/LzmaEnc.c:1205:16: style: Local variable 'i' shadows outer variable [shadowVariable]
+        UInt32 i;
+               ^
+src/lzma/LzmaEnc.c:934:52: note: Shadowed declaration
+  UInt32 numAvail, mainLen, numPairs, repMaxIndex, i, posState, lenEnd, len, cur;
+                                                   ^
+src/lzma/LzmaEnc.c:1205:16: note: Shadow variable
+        UInt32 i;
+               ^
+src/lzma/LzmaEnc.c:1402:14: style: Local variable 'normalMatchPrice' shadows outer variable [shadowVariable]
+      UInt32 normalMatchPrice = matchPrice + GET_PRICE_0(p->isRep[state]);
+             ^
+src/lzma/LzmaEnc.c:935:37: note: Shadowed declaration
+  UInt32 matchPrice, repMatchPrice, normalMatchPrice;
+                                    ^
+src/lzma/LzmaEnc.c:1402:14: note: Shadow variable
+      UInt32 normalMatchPrice = matchPrice + GET_PRICE_0(p->isRep[state]);
+             ^
+src/lzma/LzmaEnc.c:1460:22: style: Local variable 'curAndLenPrice' shadows outer variable [shadowVariable]
+              UInt32 curAndLenPrice;
+                     ^
+src/lzma/LzmaEnc.c:1415:16: note: Shadowed declaration
+        UInt32 curAndLenPrice = normalMatchPrice + p->lenEnc.prices[posState][lenTest - LZMA_MATCH_LEN_MIN];
+               ^
+src/lzma/LzmaEnc.c:1460:22: note: Shadow variable
+              UInt32 curAndLenPrice;
+                     ^
+src/lzma/LzmaEnc.c:1461:25: style: Local variable 'opt' shadows outer variable [shadowVariable]
+              COptimal *opt;
+                        ^
+src/lzma/LzmaEnc.c:1417:19: note: Shadowed declaration
+        COptimal *opt;
+                  ^
+src/lzma/LzmaEnc.c:1461:25: note: Shadow variable
+              COptimal *opt;
+                        ^
+src/lzma/LzmaEnc.c:1669:14: style: Local variable 'i' shadows outer variable [shadowVariable]
+      UInt32 i;
+             ^
+src/lzma/LzmaEnc.c:1648:10: note: Shadowed declaration
+  UInt32 i, lenToPosState;
+         ^
+src/lzma/LzmaEnc.c:1669:14: note: Shadow variable
+      UInt32 i;
+             ^
+src/lzma/LzmaEnc.c:401:27: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+      props.dictSize > (1 << kDicLogSizeMaxCompress) || props.dictSize > (1 << 30))
+                          ^
+src/lzma/LzmaEnc.c:401:27: error: Signed integer overflow for expression '1<<(((9+(int)sizeof(unsigned long)/2)-1)*2+7)'. [integerOverflow]
+      props.dictSize > (1 << kDicLogSizeMaxCompress) || props.dictSize > (1 << 30))
+                          ^
+src/lzma/LzmaEnc.c:1906:10: style: Variable 'btMode' is assigned a value that is never used. [unreadVariable]
+  btMode = (p->matchFinderBase.btMode != 0);
+         ^
+src/lzma/LzmaEnc.c:2084:6: style: Variable 'pp' is assigned a value that is never used. [unreadVariable]
+  pp = pp;
+     ^
+src/lzma/LzmaEnc.c:2132:18: style: Variable 'outStream.data' is assigned a value that is never used. [unreadVariable]
+  outStream.data = dest;
+                 ^
+src/lzma/LzmaEnc.c:2234:18: style: Variable 'outStream.data' is assigned a value that is never used. [unreadVariable]
+  outStream.data = dest;
+                 ^
+src/lzma/LzmaEnc.c:557:10: style: Local variable 'ttt' shadows outer variable [shadowVariable]
+  UInt32 ttt = *prob;
+         ^
+src/lzma/LzmaEnc.c:24:12: note: Shadowed declaration
+static int ttt = 0;
+           ^
+src/lzma/LzmaEnc.c:557:10: note: Shadow variable
+  UInt32 ttt = *prob;
+         ^
+src/lzma/LzmaEnc.c:1120:16: style: Local variable 'i' shadows outer variable [shadowVariable]
+      unsigned i;
+               ^
+src/lzma/LzmaEnc.c:934:52: note: Shadowed declaration
+  UInt32 numAvail, mainLen, numPairs, repMaxIndex, i, posState, lenEnd, len, cur;
+                                                   ^
+src/lzma/LzmaEnc.c:1120:16: note: Shadow variable
+      unsigned i;
+               ^
+src/lzo-lg.c:279:5: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    printf("header error - invalid method %d (version: %d)\n", method, version);
+    ^
+src/lzo-lg.c:189:13: style: Same expression on both sides of '&'. [knownConditionTrueFalse]
+  if (flags & 1)
+            ^
+src/lzo-lg.c:145:21: note: 'flags' is assigned value '1' here.
+ lzo_uint32 flags = 1;  /* do compute a checksum */
+                    ^
+src/lzo-lg.c:189:13: note: Same expression on both sides of '&'.
+  if (flags & 1)
+            ^
+src/lzo-lg.c:226:12: style: Same expression on both sides of '&'. [knownConditionTrueFalse]
+ if (flags & 1)
+           ^
+src/lzo-lg.c:145:21: note: 'flags' is assigned value '1' here.
+ lzo_uint32 flags = 1;  /* do compute a checksum */
+                    ^
+src/lzo-lg.c:226:12: note: Same expression on both sides of '&'.
+ if (flags & 1)
+           ^
+src/lzo-lg.c:93:9: error: Uninitialized variable: c [uninitvar]
+ return c;
+        ^
+src/lzo-lg.c:91:16: style: Variable 'c' is not assigned a value. [unassignedVariable]
+ unsigned char c;
+               ^
+src/lzo-lg.c:472:17: style: Variable 'UNUSED' is assigned a value that is never used. [unreadVariable]
+ lzo_uint UNUSED(opt_block_size);
+                ^
+src/main.c:273:5: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+    break;
+    ^
+src/main.c:235:3: error: Memory leak: current_dir [memleak]
+  return EXIT_FAILURE;
+  ^
+src/mediatek.c:38:2: portability: %X in format string (no. 1) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+ printf("[MTK] PBL Size: 0x%08X\n", pbl_size);
+ ^
+src/mediatek_pkg.c:511:3: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  printf("\nPAK #%u %s (name='%s', offset='0x%lx', size='%u bytes'",
+  ^
+src/mfile.c:172:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ mfile = NULL;
+ ^
+src/minigzip.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/minigzip.c:573:9: style: Condition 'in==NULL' is always false [knownConditionTrueFalse]
+ if (in == NULL) {
+        ^
+src/minigzip.c:551:9: note: Assuming that condition 'in==NULL' is not redundant
+ if (in == NULL) {
+        ^
+src/minigzip.c:573:9: note: Condition 'in==NULL' is always false
+ if (in == NULL) {
+        ^
+src/minigzip.c:434:9: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int len;
+        ^
+src/minigzip.c:98:16: error: Uninitialized variable: msgbuf [uninitvar]
+            && msgbuf[chars - 2] == '\r' && msgbuf[chars - 1] == '\n') {
+               ^
+src/minigzip.c:100:13: error: Uninitialized variable: msgbuf [uninitvar]
+            msgbuf[chars] = 0;
+            ^
+src/minigzip.c:105:13: error: Uninitialized variable: msgbuf [uninitvar]
+            msgbuf[chars] = 0;
+            ^
+src/minigzip.c:108:23: error: Uninitialized variable: msgbuf [uninitvar]
+        wcstombs(buf, msgbuf, chars + 1);
+                      ^
+src/minigzip.c:159:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    q = Z_NULL;
+    ^
+src/minigzip.c:166:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    q = Z_NULL;
+    ^
+src/minigzip.c:265:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+src/minigzip.c:266:14: style: The scope of the variable 'got' can be reduced. [variableScope]
+    unsigned got;
+             ^
+src/minigzip.c:159:7: style: Variable 'q' is assigned a value that is never used. [unreadVariable]
+    q = Z_NULL;
+      ^
+src/minigzip.c:166:7: style: Variable 'q' is assigned a value that is never used. [unreadVariable]
+    q = Z_NULL;
+      ^
+src/partinfo.c:86:3: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  fprintf(destfile, "\tSize: %dGB", (devsize / 1024 / 1024 / 1024));
+  ^
+src/partinfo.c:89:3: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  fprintf(destfile, "\tSize: %dMB", (devsize / 1024 / 1024));
+  ^
+src/squashfs/action.c:523:3: error: Common realloc mistake: 'spec_list' nulled but not freed upon failure [memleakOnRealloc]
+ *spec_list = realloc(*spec_list, (spec_count + 1) * sizeof(struct action));
+  ^
+src/squashfs/action.c:616:9: style: The scope of the variable 'match' can be reduced. [variableScope]
+ int i, match;
+        ^
+src/squashfs/action.c:1122:21: style: The scope of the variable 'data' can be reduced. [variableScope]
+ struct empty_data *data;
+                    ^
+src/squashfs/action.c:1716:6: style: The scope of the variable 'res' can be reduced. [variableScope]
+ int res;
+     ^
+src/squashfs/action.c:1966:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int child, i, res, status;
+            ^
+src/squashfs/action.c:1174:15: style: Local variable 'pathname' shadows outer function [shadowFunction]
+ char *name, *pathname;
+              ^
+src/squashfs/action.c:84:14: note: Shadowed declaration
+extern char *pathname(struct dir_ent *);
+             ^
+src/squashfs/action.c:1174:15: note: Shadow variable
+ char *name, *pathname;
+              ^
+src/squashfs/action.c:1219:26: style: Local variable 'source' shadows outer variable [shadowVariable]
+ struct dir_info *dest, *source = dir_ent->our_dir;
+                         ^
+src/squashfs/action.c:51:24: note: Shadowed declaration
+static char *cur_ptr, *source;
+                       ^
+src/squashfs/action.c:1219:26: note: Shadow variable
+ struct dir_info *dest, *source = dir_ent->our_dir;
+                         ^
+src/squashfs/action.c:1428:20: style: Local variable 'source' shadows outer variable [shadowVariable]
+  struct dir_info *source = dir_ent->our_dir, *dest = move_ent->dest;
+                   ^
+src/squashfs/action.c:51:24: note: Shadowed declaration
+static char *cur_ptr, *source;
+                       ^
+src/squashfs/action.c:1428:20: note: Shadow variable
+  struct dir_info *source = dir_ent->our_dir, *dest = move_ent->dest;
+                   ^
+src/squashfs/action.c:647:21: portability: 'fragment' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  action = fragment - offsetof(struct action, data);
+                    ^
+src/squashfs/caches-queues-lists.c:238:1: error: There is an unknown macro here somewhere. Configuration is required. If INSERT_HASH_TABLE is a macro then please configure it. [unknownMacro]
+INSERT_HASH_TABLE(cache, struct cache, CALCULATE_CACHE_HASH, index, hash)
+^
+src/squashfs/gzip_wrapper.c:368:25: style: Local variable 'strategy' shadows outer variable [shadowVariable]
+  struct gzip_strategy *strategy = &stream->strategy[i];
+                        ^
+src/squashfs/gzip_wrapper.c:33:24: note: Shadowed declaration
+static struct strategy strategy[] = {
+                       ^
+src/squashfs/gzip_wrapper.c:368:25: note: Shadow variable
+  struct gzip_strategy *strategy = &stream->strategy[i];
+                        ^
+src/squashfs/lzma_wrapper.c:37:26: portability: 'dest' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ res = LzmaCompress(dest + LZMA_HEADER_SIZE, &outlen, src, size, dest, &props_size, 5, block_size, 3, 0, 2, 32, 1);
+                         ^
+src/squashfs/lzma_wrapper.c:89:42: portability: 'src' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ res = LzmaUncompress(dest, &outlen, src + LZMA_HEADER_SIZE, &inlen, src, LZMA_PROPS_SIZE);
+                                         ^
+src/squashfs/lzma_xz_wrapper.c:129:21: portability: 'src' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ strm.next_in = src + LZMA_HEADER_SIZE;
+                    ^
+src/squashfs/mksquashfs.c:4064:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Inode table size %d bytes (%.2f Kbytes)\n", inode_bytes, inode_bytes / 1024.0);
+ ^
+src/squashfs/mksquashfs.c:4065:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("\t%.2f%% of uncompressed inode table size (%d bytes)\n", ((float)inode_bytes / total_inode_bytes) * 100.0, total_inode_bytes);
+ ^
+src/squashfs/mksquashfs.c:4066:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Directory table size %d bytes (%.2f Kbytes)\n", directory_bytes, directory_bytes / 1024.0);
+ ^
+src/squashfs/mksquashfs.c:4067:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("\t%.2f%% of uncompressed directory table size (%d bytes)\n", ((float)directory_bytes / total_directory_bytes) * 100.0, total_directory_bytes);
+ ^
+src/squashfs/mksquashfs.c:4069:3: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("Xattr table size %d bytes (%.2f Kbytes)\n", xattr_bytes, xattr_bytes / 1024.0);
+  ^
+src/squashfs/mksquashfs.c:4070:3: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("\t%.2f%% of uncompressed xattr table size (%d bytes)\n", ((float)xattr_bytes / total_xattr_bytes) * 100.0, total_xattr_bytes);
+  ^
+src/squashfs/mksquashfs.c:4076:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Number of inodes %d\n", inode_count);
+ ^
+src/squashfs/mksquashfs.c:4085:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Number of ids (unique uids + gids) %d\n", id_count);
+ ^
+src/squashfs/mksquashfs.c:4086:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Number of uids %d\n", uid_count);
+ ^
+src/squashfs/mksquashfs.c:4095:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("Number of gids %d\n", guid_count);
+ ^
+src/squashfs/mksquashfs.c:3859:48: warning: Either the condition 'fd==NULL' is redundant or there is possible null pointer dereference: fd. [nullPointerRedundantCheck]
+ while (fgets(filename = buffer, MAX_LINE + 1, fd) != NULL) {
+                                               ^
+src/squashfs/mksquashfs.c:3856:9: note: Assuming that condition 'fd==NULL' is not redundant
+ if (fd == NULL)
+        ^
+src/squashfs/mksquashfs.c:3859:48: note: Null pointer dereference
+ while (fgets(filename = buffer, MAX_LINE + 1, fd) != NULL) {
+                                               ^
+src/squashfs/mksquashfs.c:3898:13: warning: Either the condition 'fd==NULL' is redundant or there is possible null pointer dereference: fd. [nullPointerRedundantCheck]
+ if (ferror(fd))
+            ^
+src/squashfs/mksquashfs.c:3856:9: note: Assuming that condition 'fd==NULL' is not redundant
+ if (fd == NULL)
+        ^
+src/squashfs/mksquashfs.c:3898:13: note: Null pointer dereference
+ if (ferror(fd))
+            ^
+src/squashfs/mksquashfs.c:3901:9: warning: Either the condition 'fd==NULL' is redundant or there is possible null pointer dereference: fd. [nullPointerRedundantCheck]
+ fclose(fd);
+        ^
+src/squashfs/mksquashfs.c:3856:9: note: Assuming that condition 'fd==NULL' is not redundant
+ if (fd == NULL)
+        ^
+src/squashfs/mksquashfs.c:3901:9: note: Null pointer dereference
+ fclose(fd);
+        ^
+src/squashfs/mksquashfs.c:505:6: style: The scope of the variable 'avail_bytes' can be reduced. [variableScope]
+ int avail_bytes;
+     ^
+src/squashfs/mksquashfs.c:535:6: style: The scope of the variable 'avail_bytes' can be reduced. [variableScope]
+ int avail_bytes;
+     ^
+src/squashfs/mksquashfs.c:1295:6: style: The scope of the variable 'frg' can be reduced. [variableScope]
+ int frg, size;
+     ^
+src/squashfs/mksquashfs.c:1295:11: style: The scope of the variable 'size' can be reduced. [variableScope]
+ int frg, size;
+          ^
+src/squashfs/mksquashfs.c:1499:15: style: The scope of the variable 'bytes' can be reduced. [variableScope]
+ unsigned int bytes;
+              ^
+src/squashfs/mksquashfs.c:2544:8: style: The scope of the variable 's' can be reduced. [variableScope]
+ char *s;
+       ^
+src/squashfs/mksquashfs.c:2817:17: style: The scope of the variable 'res' can be reduced. [variableScope]
+  int pass = 1, res;
+                ^
+src/squashfs/mksquashfs.c:2849:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+src/squashfs/mksquashfs.c:2862:17: style: The scope of the variable 'res' can be reduced. [variableScope]
+  int pass = 1, res;
+                ^
+src/squashfs/mksquashfs.c:3676:9: style: The scope of the variable 'error' can be reduced. [variableScope]
+ int i, error;
+        ^
+src/squashfs/mksquashfs.c:680:15: style: Local variable 'pathname' shadows outer function [shadowFunction]
+ static char *pathname = NULL;
+              ^
+src/squashfs/mksquashfs.c:669:7: note: Shadowed declaration
+char *pathname(struct dir_ent *dir_ent) {
+      ^
+src/squashfs/mksquashfs.c:680:15: note: Shadow variable
+ static char *pathname = NULL;
+              ^
+src/squashfs/mksquashfs.c:1499:15: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ unsigned int bytes;
+              ^
+src/squashfs/mksquashfs.c:110:11: note: Shadowed declaration
+long long bytes = 0, total_bytes = 0;
+          ^
+src/squashfs/mksquashfs.c:1499:15: note: Shadow variable
+ unsigned int bytes;
+              ^
+src/squashfs/mksquashfs.c:1774:12: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ long long bytes = 0;
+           ^
+src/squashfs/mksquashfs.c:110:11: note: Shadowed declaration
+long long bytes = 0, total_bytes = 0;
+          ^
+src/squashfs/mksquashfs.c:1774:12: note: Shadow variable
+ long long bytes = 0;
+           ^
+src/squashfs/mksquashfs.c:1858:12: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ long long bytes, read_size;
+           ^
+src/squashfs/mksquashfs.c:110:11: note: Shadowed declaration
+long long bytes = 0, total_bytes = 0;
+          ^
+src/squashfs/mksquashfs.c:1858:12: note: Shadow variable
+ long long bytes, read_size;
+           ^
+src/squashfs/mksquashfs.c:1920:7: style: Local variable 'res' shadows outer variable [shadowVariable]
+  int res;
+      ^
+src/squashfs/mksquashfs.c:1857:20: note: Shadowed declaration
+ int blocks, file, res;
+                   ^
+src/squashfs/mksquashfs.c:1920:7: note: Shadow variable
+  int res;
+      ^
+src/squashfs/mksquashfs.c:2045:8: style: Local variable 'stream' shadows outer variable [shadowVariable]
+ void *stream = NULL;
+       ^
+src/squashfs/mksquashfs.c:269:7: note: Shadowed declaration
+void *stream = NULL;
+      ^
+src/squashfs/mksquashfs.c:2045:8: note: Shadow variable
+ void *stream = NULL;
+       ^
+src/squashfs/mksquashfs.c:2074:8: style: Local variable 'stream' shadows outer variable [shadowVariable]
+ void *stream = NULL;
+       ^
+src/squashfs/mksquashfs.c:269:7: note: Shadowed declaration
+void *stream = NULL;
+      ^
+src/squashfs/mksquashfs.c:2074:8: note: Shadow variable
+ void *stream = NULL;
+       ^
+src/squashfs/mksquashfs.c:2160:22: style: Local variable 'fragment_buffer' shadows outer variable [shadowVariable]
+ struct file_buffer *fragment_buffer = NULL;
+                     ^
+src/squashfs/mksquashfs.c:251:31: note: Shadowed declaration
+struct cache *reader_buffer, *fragment_buffer, *reserve_cache;
+                              ^
+src/squashfs/mksquashfs.c:2160:22: note: Shadow variable
+ struct file_buffer *fragment_buffer = NULL;
+                     ^
+src/squashfs/mksquashfs.c:2247:22: style: Local variable 'fragment_buffer' shadows outer variable [shadowVariable]
+ struct file_buffer *fragment_buffer = NULL;
+                     ^
+src/squashfs/mksquashfs.c:251:31: note: Shadowed declaration
+struct cache *reader_buffer, *fragment_buffer, *reserve_cache;
+                              ^
+src/squashfs/mksquashfs.c:2247:22: note: Shadow variable
+ struct file_buffer *fragment_buffer = NULL;
+                     ^
+src/squashfs/mksquashfs.c:2379:22: style: Local variable 'fragment_buffer' shadows outer variable [shadowVariable]
+ struct file_buffer *fragment_buffer = NULL;
+                     ^
+src/squashfs/mksquashfs.c:251:31: note: Shadowed declaration
+struct cache *reader_buffer, *fragment_buffer, *reserve_cache;
+                              ^
+src/squashfs/mksquashfs.c:2379:22: note: Shadow variable
+ struct file_buffer *fragment_buffer = NULL;
+                     ^
+src/squashfs/mksquashfs.c:2911:9: style: Local variable 'filename' shadows outer argument [shadowArgument]
+  char *filename = pathname(dir_ent);
+        ^
+src/squashfs/mksquashfs.c:2897:34: note: Shadowed declaration
+struct dir_info *dir_scan1(char *filename, char *subpath, struct pathnames *paths, struct dir_ent *(_readdir) (struct dir_info *), int depth) {
+                                 ^
+src/squashfs/mksquashfs.c:2911:9: note: Shadow variable
+  char *filename = pathname(dir_ent);
+        ^
+src/squashfs/mksquashfs.c:2912:9: style: Local variable 'subpath' shadows outer argument [shadowArgument]
+  char *subpath = NULL;
+        ^
+src/squashfs/mksquashfs.c:2897:50: note: Shadowed declaration
+struct dir_info *dir_scan1(char *filename, char *subpath, struct pathnames *paths, struct dir_ent *(_readdir) (struct dir_info *), int depth) {
+                                                 ^
+src/squashfs/mksquashfs.c:2912:9: note: Shadow variable
+  char *subpath = NULL;
+        ^
+src/squashfs/mksquashfs.c:3004:22: style: Local variable 'inode_info' shadows outer variable [shadowVariable]
+  struct inode_info *inode_info = dir_ent->inode;
+                     ^
+src/squashfs/mksquashfs.c:157:20: note: Shadowed declaration
+struct inode_info *inode_info[INODE_HASH_SIZE];
+                   ^
+src/squashfs/mksquashfs.c:3004:22: note: Shadow variable
+  struct inode_info *inode_info = dir_ent->inode;
+                     ^
+src/squashfs/mksquashfs.c:3005:16: style: Local variable 'buf' shadows outer variable [shadowVariable]
+  struct stat *buf = &inode_info->buf;
+               ^
+src/squashfs/mksquashfs.c:3000:14: note: Shadowed declaration
+ struct stat buf;
+             ^
+src/squashfs/mksquashfs.c:3005:16: note: Shadow variable
+  struct stat *buf = &inode_info->buf;
+               ^
+src/squashfs/mksquashfs.c:3006:9: style: Local variable 'name' shadows outer variable [shadowVariable]
+  char *name = dir_ent->name;
+        ^
+src/squashfs/mksquashfs.c:2500:7: note: Shadowed declaration
+char *name;
+      ^
+src/squashfs/mksquashfs.c:3006:9: note: Shadow variable
+  char *name = dir_ent->name;
+        ^
+src/squashfs/mksquashfs.c:3017:17: style: Local variable 'buf' shadows outer variable [shadowVariable]
+   struct stat *buf;
+                ^
+src/squashfs/mksquashfs.c:3000:14: note: Shadowed declaration
+ struct stat buf;
+             ^
+src/squashfs/mksquashfs.c:3017:17: note: Shadow variable
+   struct stat *buf;
+                ^
+src/squashfs/mksquashfs.c:3055:20: style: Local variable 'dir_ent' shadows outer variable [shadowVariable]
+   struct dir_ent *dir_ent = create_dir_entry(pseudo_ent->name, NULL,
+                   ^
+src/squashfs/mksquashfs.c:2998:18: note: Shadowed declaration
+ struct dir_ent *dir_ent = NULL;
+                 ^
+src/squashfs/mksquashfs.c:3055:20: note: Shadow variable
+   struct dir_ent *dir_ent = create_dir_entry(pseudo_ent->name, NULL,
+                   ^
+src/squashfs/mksquashfs.c:3770:8: style: Local variable 'path' shadows outer variable [shadowVariable]
+ char *path;
+       ^
+src/squashfs/mksquashfs.c:193:18: note: Shadowed declaration
+struct pathname *path = NULL;
+                 ^
+src/squashfs/mksquashfs.c:3770:8: note: Shadow variable
+ char *path;
+       ^
+src/squashfs/mksquashfs.c:3851:8: style: Local variable 'fd' shadows outer variable [shadowVariable]
+ FILE *fd;
+       ^
+src/squashfs/mksquashfs.c:81:5: note: Shadowed declaration
+int fd;
+    ^
+src/squashfs/mksquashfs.c:3851:8: note: Shadow variable
+ FILE *fd;
+       ^
+src/squashfs/mksquashfs.c:3908:22: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ int res, recoverfd, bytes = sBlk->bytes_used - sBlk->inode_table_start;
+                     ^
+src/squashfs/mksquashfs.c:110:11: note: Shadowed declaration
+long long bytes = 0, total_bytes = 0;
+          ^
+src/squashfs/mksquashfs.c:3908:22: note: Shadow variable
+ int res, recoverfd, bytes = sBlk->bytes_used - sBlk->inode_table_start;
+                     ^
+src/squashfs/mksquashfs.c:3956:6: style: Local variable 'fd' shadows outer variable [shadowVariable]
+ int fd, recoverfd, bytes;
+     ^
+src/squashfs/mksquashfs.c:81:5: note: Shadowed declaration
+int fd;
+    ^
+src/squashfs/mksquashfs.c:3956:6: note: Shadow variable
+ int fd, recoverfd, bytes;
+     ^
+src/squashfs/mksquashfs.c:3956:21: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ int fd, recoverfd, bytes;
+                    ^
+src/squashfs/mksquashfs.c:110:11: note: Shadowed declaration
+long long bytes = 0, total_bytes = 0;
+          ^
+src/squashfs/mksquashfs.c:3956:21: note: Shadow variable
+ int fd, recoverfd, bytes;
+                    ^
+src/squashfs/mksquashfs.c:3957:41: style: Local variable 'sBlk' shadows outer variable [shadowVariable]
+ struct squashfs_super_block orig_sBlk, sBlk;
+                                        ^
+src/squashfs/mksquashfs.c:82:29: note: Shadowed declaration
+struct squashfs_super_block sBlk;
+                            ^
+src/squashfs/mksquashfs.c:3957:41: note: Shadow variable
+ struct squashfs_super_block orig_sBlk, sBlk;
+                                        ^
+src/squashfs/mksquashfs.c:4726:8: style: Local variable 'res' shadows outer variable [shadowVariable]
+   int res = read_sort_file(argv[++i], source,
+       ^
+src/squashfs/mksquashfs.c:4246:6: note: Shadowed declaration
+ int res, i;
+     ^
+src/squashfs/mksquashfs.c:4726:8: note: Shadow variable
+   int res = read_sort_file(argv[++i], source,
+       ^
+src/squashfs/mksquashfs.c:433:23: portability: 'buff' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  res = read(fd, buff + count, bytes - count);
+                      ^
+src/squashfs/mksquashfs.c:473:24: portability: 'buff' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  res = write(fd, buff + count, bytes - count);
+                       ^
+src/squashfs/mksquashfs.c:790:40: portability: 'inode' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  SQUASHFS_SWAP_INTS(block_list, inode + off, offset);
+                                       ^
+src/squashfs/mksquashfs.c:810:40: portability: 'inode' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  SQUASHFS_SWAP_INTS(block_list, inode + off, offset);
+                                       ^
+src/squashfs/mksquashfs.c:836:13: portability: 'inode' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  p = inode + offsetof(struct squashfs_ldir_inode_header, index);
+            ^
+src/squashfs/mksquashfs.c:915:17: portability: 'inode' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  strncpy(inode + off, buff, byte);
+                ^
+src/squashfs/mksquashfs.c:940:17: portability: 'inode' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  strncpy(inode + off, buff, byte);
+                ^
+src/squashfs/mksquashfs.c:941:36: portability: 'inode' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  SQUASHFS_SWAP_INTS(&xattr, inode + off + byte, 1);
+                                   ^
+src/squashfs/mksquashfs.c:941:42: portability: 'inode+off' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  SQUASHFS_SWAP_INTS(&xattr, inode + off + byte, 1);
+                                         ^
+src/squashfs/mksquashfs.c:1418:50: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  c_byte = mangle(cbuffer + BLOCK_OFFSET, buffer + i * SQUASHFS_METADATA_SIZE, avail_bytes, SQUASHFS_METADATA_SIZE, uncompressed, 0);
+                                                 ^
+src/squashfs/mksquashfs.c:3852:7: style: Variable 'buffer' is not assigned a value. [unassignedVariable]
+ char buffer[MAX_LINE + 1]; /* overflow safe */
+      ^
+src/squashfs/mksquashfs.c:3551:0: information: Skipping configuration 'HW_AVAILCPU' since the value of 'HW_AVAILCPU' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  mib[1] = HW_AVAILCPU;
+^
+src/squashfs/mksquashfs.c:4651:11: style: Variable 'progress' is reassigned a value before the old one has been used. [redundantAssignment]
+ progress = FALSE;
+          ^
+src/squashfs/mksquashfs.c:4643:12: note: progress is assigned
+  progress = force_progress;
+           ^
+src/squashfs/mksquashfs.c:4651:11: note: progress is overwritten
+ progress = FALSE;
+          ^
+src/squashfs/mksquashfs.c:1102:7: style: The scope of the variable 'count' can be reduced. [variableScope]
+  int count;
+      ^
+src/squashfs/mksquashfs.c:1108:37: style: The scope of the variable 'idirp' can be reduced. [variableScope]
+   struct squashfs_dir_entry idir, *idirp;
+                                    ^
+src/squashfs/process_fragments.c:63:48: style: The scope of the variable 'value' can be reduced. [variableScope]
+ int bytes = file_buffer->size, sparse = TRUE, value;
+                                               ^
+src/squashfs/read_fs.c:224:15: style: Local variable 'start' shadows outer argument [shadowArgument]
+    long long start, file_bytes = 0;
+              ^
+src/squashfs/read_fs.c:115:40: note: Shadowed declaration
+int scan_inode_table(int fd, long long start, long long end, long long root_inode_start, int root_inode_offset, struct squashfs_super_block *sBlk, union squashfs_inode_header
+                                       ^
+src/squashfs/read_fs.c:224:15: note: Shadow variable
+    long long start, file_bytes = 0;
+              ^
+src/squashfs/read_fs.c:269:15: style: Local variable 'start' shadows outer argument [shadowArgument]
+    long long start, file_bytes = 0;
+              ^
+src/squashfs/read_fs.c:115:40: note: Shadowed declaration
+int scan_inode_table(int fd, long long start, long long end, long long root_inode_start, int root_inode_offset, struct squashfs_super_block *sBlk, union squashfs_inode_header
+                                       ^
+src/squashfs/read_fs.c:269:15: note: Shadow variable
+    long long start, file_bytes = 0;
+              ^
+src/squashfs/read_fs.c:337:38: style: Local variable 'dir_inode' shadows outer argument [shadowArgument]
+    struct squashfs_dir_inode_header dir_inode;
+                                     ^
+src/squashfs/read_fs.c:116:8: note: Shadowed declaration
+      *dir_inode, unsigned char **inode_table, unsigned int *root_inode_block, unsigned int *root_inode_size, long long *uncompressed_file, unsigned int *uncompressed_directory, int *file_count, int *sym_count, int *dev_count, int *dir_count, int *fifo_count, int *sock_count, unsigned int *id_table) {
+       ^
+src/squashfs/read_fs.c:337:38: note: Shadow variable
+    struct squashfs_dir_inode_header dir_inode;
+                                     ^
+src/squashfs/read_fs.c:353:39: style: Local variable 'dir_inode' shadows outer argument [shadowArgument]
+    struct squashfs_ldir_inode_header dir_inode;
+                                      ^
+src/squashfs/read_fs.c:116:8: note: Shadowed declaration
+      *dir_inode, unsigned char **inode_table, unsigned int *root_inode_block, unsigned int *root_inode_size, long long *uncompressed_file, unsigned int *uncompressed_directory, int *file_count, int *sym_count, int *dev_count, int *dir_count, int *fifo_count, int *sock_count, unsigned int *id_table) {
+       ^
+src/squashfs/read_fs.c:353:39: note: Shadow variable
+    struct squashfs_ldir_inode_header dir_inode;
+                                      ^
+src/squashfs/read_xattrs.c:300:16: portability: 'xattrs' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xptr = xattrs + get_xattr_block(start) + offset;
+               ^
+src/squashfs/read_xattrs.c:300:41: portability: 'xattrs+get_xattr_block(start)' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ xptr = xattrs + get_xattr_block(start) + offset;
+                                        ^
+src/squashfs/read_xattrs.c:315:8: portability: 'xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  xptr += sizeof(entry);
+       ^
+src/squashfs/read_xattrs.c:327:8: portability: 'xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  xptr += entry.size;
+       ^
+src/squashfs/read_xattrs.c:335:9: portability: 'xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xptr += sizeof(val);
+        ^
+src/squashfs/read_xattrs.c:337:9: portability: 'xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xptr += sizeof(xattr);
+        ^
+src/squashfs/read_xattrs.c:340:22: portability: 'xattrs' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   ool_xptr = xattrs + get_xattr_block(start) + offset;
+                     ^
+src/squashfs/read_xattrs.c:340:47: portability: 'xattrs+get_xattr_block(start)' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   ool_xptr = xattrs + get_xattr_block(start) + offset;
+                                              ^
+src/squashfs/read_xattrs.c:342:35: portability: 'ool_xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xattr_list[j].value = ool_xptr + sizeof(val);
+                                  ^
+src/squashfs/read_xattrs.c:345:31: portability: 'xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xattr_list[j].value = xptr + sizeof(val);
+                              ^
+src/squashfs/read_xattrs.c:346:9: portability: 'xptr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   xptr += sizeof(val) + val.vsize;
+        ^
+src/squashfs/sort.c:178:16: style: Local variable 'buf' shadows outer argument [shadowArgument]
+  struct stat *buf = &dir_ent->inode->buf;
+               ^
+src/squashfs/sort.c:172:80: note: Shadowed declaration
+void generate_file_priorities(struct dir_info *dir, int priority, struct stat *buf) {
+                                                                               ^
+src/squashfs/sort.c:178:16: note: Shadow variable
+  struct stat *buf = &dir_ent->inode->buf;
+               ^
+src/squashfs/swap.c:85:1: portability: 's' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+SWAP_LE_NUM(16)
+^
+src/squashfs/swap.c:85:1: portability: 'd' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+SWAP_LE_NUM(16)
+^
+src/squashfs/swap.c:86:2: portability: 's' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ SWAP_LE_NUM(32)
+ ^
+src/squashfs/swap.c:86:2: portability: 'd' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ SWAP_LE_NUM(32)
+ ^
+src/squashfs/swap.c:87:2: portability: 's' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ SWAP_LE_NUM(64)
+ ^
+src/squashfs/swap.c:87:2: portability: 'd' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ SWAP_LE_NUM(64)
+ ^
+src/squashfs/unsquashfs.c:2028:3: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+  printf("Max Files: %ju, Opened Files: %u, Allocated: %u (Margin: %u)\n",
+  ^
+src/squashfs/unsquashfs.c:2381:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("%d inodes (%d blocks) to write\n\n", total_inodes, total_inodes - total_files + total_blocks);
+ ^
+src/squashfs/unsquashfs.c:2381:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ printf("%d inodes (%d blocks) to write\n\n", total_inodes, total_inodes - total_files + total_blocks);
+ ^
+src/squashfs/unsquashfs.c:695:4: error: Common realloc mistake: 'inode_table' nulled but not freed upon failure [memleakOnRealloc]
+   inode_table = realloc(inode_table, size += SQUASHFS_METADATA_SIZE);
+   ^
+src/squashfs/unsquashfs.c:1045:4: error: Common realloc mistake: 'directory_table' nulled but not freed upon failure [memleakOnRealloc]
+   directory_table = realloc(directory_table, size += SQUASHFS_METADATA_SIZE);
+   ^
+src/squashfs/unsquashfs.c:1683:44: warning: Either the condition 'fd==NULL' is redundant or there is possible null pointer dereference: fd. [nullPointerRedundantCheck]
+ while (fgets(name = buffer, MAX_LINE + 1, fd) != NULL) {
+                                           ^
+src/squashfs/unsquashfs.c:1680:9: note: Assuming that condition 'fd==NULL' is not redundant
+ if (fd == NULL)
+        ^
+src/squashfs/unsquashfs.c:1683:44: note: Null pointer dereference
+ while (fgets(name = buffer, MAX_LINE + 1, fd) != NULL) {
+                                           ^
+src/squashfs/unsquashfs.c:1718:13: warning: Either the condition 'fd==NULL' is redundant or there is possible null pointer dereference: fd. [nullPointerRedundantCheck]
+ if (ferror(fd))
+            ^
+src/squashfs/unsquashfs.c:1680:9: note: Assuming that condition 'fd==NULL' is not redundant
+ if (fd == NULL)
+        ^
+src/squashfs/unsquashfs.c:1718:13: note: Null pointer dereference
+ if (ferror(fd))
+            ^
+src/squashfs/unsquashfs.c:1721:9: warning: Either the condition 'fd==NULL' is redundant or there is possible null pointer dereference: fd. [nullPointerRedundantCheck]
+ fclose(fd);
+        ^
+src/squashfs/unsquashfs.c:1680:9: note: Assuming that condition 'fd==NULL' is not redundant
+ if (fd == NULL)
+        ^
+src/squashfs/unsquashfs.c:1721:9: note: Null pointer dereference
+ fclose(fd);
+        ^
+src/squashfs/unsquashfs.c:1136:9: style: The scope of the variable 'error' can be reduced. [variableScope]
+ int i, error;
+        ^
+src/squashfs/unsquashfs.c:199:8: style: Local variable 'data' shadows outer variable [shadowVariable]
+ void *data;
+       ^
+src/squashfs/unsquashfs.c:68:7: note: Shadowed declaration
+char *data;
+      ^
+src/squashfs/unsquashfs.c:199:8: note: Shadow variable
+ void *data;
+       ^
+src/squashfs/unsquashfs.c:689:16: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ int size = 0, bytes = 0, res;
+               ^
+src/squashfs/unsquashfs.c:60:5: note: Shadowed declaration
+int bytes = 0, swap, file_count = 0, dir_count = 0, sym_count = 0, dev_count = 0, fifo_count = 0;
+    ^
+src/squashfs/unsquashfs.c:689:16: note: Shadow variable
+ int size = 0, bytes = 0, res;
+               ^
+src/squashfs/unsquashfs.c:927:13: style: Local variable 'start' shadows outer variable [shadowVariable]
+  long long start;
+            ^
+src/squashfs/unsquashfs.c:885:12: note: Shadowed declaration
+ long long start = inode->start;
+           ^
+src/squashfs/unsquashfs.c:927:13: note: Shadow variable
+  long long start;
+            ^
+src/squashfs/unsquashfs.c:1039:6: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ int bytes = 0, size = 0, res;
+     ^
+src/squashfs/unsquashfs.c:60:5: note: Shadowed declaration
+int bytes = 0, swap, file_count = 0, dir_count = 0, sym_count = 0, dev_count = 0, fifo_count = 0;
+    ^
+src/squashfs/unsquashfs.c:1039:6: note: Shadow variable
+ int bytes = 0, size = 0, res;
+     ^
+src/squashfs/unsquashfs.c:1313:17: style: Local variable 'i' shadows outer variable [shadowVariable]
+  struct inode *i;
+                ^
+src/squashfs/unsquashfs.c:1306:16: note: Shadowed declaration
+ struct inode *i;
+               ^
+src/squashfs/unsquashfs.c:1313:17: note: Shadow variable
+  struct inode *i;
+                ^
+src/squashfs/unsquashfs.c:1451:8: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+   int bytes;
+       ^
+src/squashfs/unsquashfs.c:60:5: note: Shadowed declaration
+int bytes = 0, swap, file_count = 0, dir_count = 0, sym_count = 0, dev_count = 0, fifo_count = 0;
+    ^
+src/squashfs/unsquashfs.c:1451:8: note: Shadow variable
+   int bytes;
+       ^
+src/squashfs/unsquashfs.c:1523:11: style: Local variable 'bytes' shadows outer variable [shadowVariable]
+ int res, bytes = 0;
+          ^
+src/squashfs/unsquashfs.c:60:5: note: Shadowed declaration
+int bytes = 0, swap, file_count = 0, dir_count = 0, sym_count = 0, dev_count = 0, fifo_count = 0;
+    ^
+src/squashfs/unsquashfs.c:1523:11: note: Shadow variable
+ int res, bytes = 0;
+          ^
+src/squashfs/unsquashfs.c:1675:8: style: Local variable 'fd' shadows outer variable [shadowVariable]
+ FILE *fd;
+       ^
+src/squashfs/unsquashfs.c:63:5: note: Shadowed declaration
+int fd;
+    ^
+src/squashfs/unsquashfs.c:1675:8: note: Shadow variable
+ FILE *fd;
+       ^
+src/squashfs/unsquashfs.c:576:23: portability: 'buff' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  res = read(fd, buff + count, bytes - count);
+                      ^
+src/squashfs/unsquashfs.c:1676:7: style: Variable 'buffer' is not assigned a value. [unassignedVariable]
+ char buffer[MAX_LINE + 1]; /* overflow safe */
+      ^
+src/squashfs/xattr.c:377:9: style: The scope of the variable 'avail_bytes' can be reduced. [variableScope]
+ int i, avail_bytes;
+        ^
+src/squashfs/xattr.c:514:14: portability: 'xp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   memcpy(xp + sizeof(val), xattr->value, xattr->vsize);
+             ^
+src/squashfs/xattr.c:531:13: portability: 'xp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  memcpy(xp + sizeof(entry), xattr->name, xattr->size);
+            ^
+src/squashfs/xattr.c:538:51: portability: 'xp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   SQUASHFS_SWAP_LONG_LONGS(&xattr->ool_value, xp + sizeof(val), 1);
+                                                  ^
+src/squashfs/xattr.c:544:14: portability: 'xp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   memcpy(xp + sizeof(val), xattr->value, xattr->vsize);
+             ^
+src/squashfs/xz_wrapper.c:302:6: style: Local variable 'dictionary_size' shadows outer variable [shadowVariable]
+ int dictionary_size, flags, printed;
+     ^
+src/squashfs/xz_wrapper.c:45:12: note: Shadowed declaration
+static int dictionary_size = 0;
+           ^
+src/squashfs/xz_wrapper.c:302:6: note: Shadow variable
+ int dictionary_size, flags, printed;
+     ^
+src/stream/tsfile.c:284:4: warning: %zX in format string (no. 1) requires 'size_t' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+   printf("PID %zX : %d Type: %zX PCRs: %zX\n", i, PIDs->number[i], PIDs->type[i], PIDs->pcr_count[i]);
+   ^
+src/stream/tsfile.c:284:4: warning: %zX in format string (no. 3) requires 'size_t' but the argument type is 'unsigned char'. [invalidPrintfArgType_uint]
+   printf("PID %zX : %d Type: %zX PCRs: %zX\n", i, PIDs->number[i], PIDs->type[i], PIDs->pcr_count[i]);
+   ^
+src/stream/tsfile.c:284:4: warning: %zX in format string (no. 4) requires 'size_t' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+   printf("PID %zX : %d Type: %zX PCRs: %zX\n", i, PIDs->number[i], PIDs->type[i], PIDs->pcr_count[i]);
+   ^
+src/stream/tsfile.c:474:2: error: Memory pointed to by 'keyPath' is freed twice. [doubleFree]
+ free(keyPath);
+ ^
+src/stream/tsfile.c:471:3: note: Memory pointed to by 'keyPath' is freed twice.
+  free(keyPath);
+  ^
+src/stream/tsfile.c:474:2: note: Memory pointed to by 'keyPath' is freed twice.
+ free(keyPath);
+ ^
+src/stream/tsfile.c:509:2: error: Memory pointed to by 'keyPath' is freed twice. [doubleFree]
+ free(keyPath);
+ ^
+src/stream/tsfile.c:506:3: note: Memory pointed to by 'keyPath' is freed twice.
+  free(keyPath);
+  ^
+src/stream/tsfile.c:509:2: note: Memory pointed to by 'keyPath' is freed twice.
+ free(keyPath);
+ ^
+src/stream/tsfile.c:144:11: style: The scope of the variable 'cur' can be reduced. [variableScope]
+ uint8_t *cur;
+          ^
+src/stream/tsfile.c:511:6: style: The scope of the variable 'append' can be reduced. [variableScope]
+ int append = 0;
+     ^
+src/stream/tsfile.c:223:10: error: Signed integer overflow for expression '0x07<<29'. [integerOverflow]
+  | 0x07 << 29
+         ^
+src/symfile.c:97:3: portability: %lu in format string (no. 3) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+  fprintf(stderr, "bad file `%s' size: %zu, expected size: %lu\n", fname,
+  ^
+src/symfile.c:67:11: style: The scope of the variable 'dwarf_data_size' can be reduced. [variableScope]
+ uint32_t dwarf_data_size = 0;
+          ^
+src/symfile.c:84:4: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ p += sizeof(*header);
+   ^
+src/symfile.c:110:4: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ p += sizeof(sym_table.sym_entry[0]) * sym_table.n_symbols;
+   ^
+src/symfile.c:113:4: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ p += sizeof(*has_hash);
+   ^
+src/symfile.c:121:5: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  p += sizeof(sym_table.hash[0]) * ((sym_table.n_symbols + 1) & (~0 - 1));
+    ^
+src/symfile.c:125:4: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ p += sizeof(*has_dwarf);
+   ^
+src/symfile.c:129:5: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  p += sizeof(sym_table.n_dwarf_lst);
+    ^
+src/symfile.c:131:5: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  p += sizeof(dwarf_data_size);
+    ^
+src/symfile.c:133:5: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  p += sizeof(sym_table.dwarf_lst[0]) * sym_table.n_dwarf_lst;
+    ^
+src/symfile.c:135:5: portability: 'p' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  p += dwarf_data_size;
+    ^
+src/symfile.c:67:27: style: Variable 'dwarf_data_size' is assigned a value that is never used. [unreadVariable]
+ uint32_t dwarf_data_size = 0;
+                          ^
+src/thpool.c:270:3: warning: Either the condition 'thread_p==NULL' is redundant or there is possible null pointer dereference: thread_p. [nullPointerRedundantCheck]
+ *thread_p = (struct thread*)malloc(sizeof(struct thread));
+  ^
+src/thpool.c:271:15: note: Assuming that condition 'thread_p==NULL' is not redundant
+ if (thread_p == NULL){
+              ^
+src/thpool.c:270:3: note: Null pointer dereference
+ *thread_p = (struct thread*)malloc(sizeof(struct thread));
+  ^
+src/thpool.c:345:11: style: The scope of the variable 'func_buff' can be reduced. [variableScope]
+   void (*func_buff)(void* arg);
+          ^
+src/thpool.c:346:10: style: The scope of the variable 'arg_buff' can be reduced. [variableScope]
+   void* arg_buff;
+         ^
+src/thpool.c:429:58: style:inconclusive: Function 'jobqueue_push' argument 2 names different: declaration 'newjob_p' definition 'newjob'. [funcArgNamesDifferent]
+static void jobqueue_push(thpool_* thpool_p, struct job* newjob){
+                                                         ^
+src/thpool.c:95:59: note: Function 'jobqueue_push' argument 2 names different: declaration 'newjob_p' definition 'newjob'.
+static void  jobqueue_push(thpool_* thpool_p, struct job* newjob_p);
+                                                          ^
+src/thpool.c:429:58: note: Function 'jobqueue_push' argument 2 names different: declaration 'newjob_p' definition 'newjob'.
+static void jobqueue_push(thpool_* thpool_p, struct job* newjob){
+                                                         ^
+src/tools/idb_extract.c:83:3: warning: %zu in format string (no. 1) requires 'size_t' but the argument type is 'unsigned long'. [invalidPrintfArgType_uint]
+  fprintf(stderr, "Invalid number of pictures (%zu)\n", idb.num_img);
+  ^
+src/tools/tsfile.c:16:11: error: Uninitialized variable: argi [uninitvar]
+   switch(argi++){
+          ^
+src/util.c:183:3: portability: %zX in format string (no. 1) requires 'size_t' but the argument type is 'ptrdiff_t {aka signed int}'. [invalidPrintfArgType_uint]
+  sprintf(szBuf, " >                                                      %08zX", pTmp - pAddress);
+  ^
+src/util.c:467:3: error: Resource leak: file [resourceLeak]
+  return 0;
+  ^
+src/util.c:487:3: error: Resource leak: file [resourceLeak]
+  return 0;
+  ^
+src/util.c:513:2: error: Memory pointed to by 'buffer' is freed twice. [doubleFree]
+ free(buffer);
+ ^
+src/util.c:506:3: note: Memory pointed to by 'buffer' is freed twice.
+  free(buffer);
+  ^
+src/util.c:513:2: note: Memory pointed to by 'buffer' is freed twice.
+ free(buffer);
+ ^
+src/util.c:164:7: style: The scope of the variable 'lOutLen' can be reduced. [variableScope]
+ long lOutLen, lIndex, lIndex2, lOutLen2;
+      ^
+src/util.c:164:33: style: The scope of the variable 'lOutLen2' can be reduced. [variableScope]
+ long lOutLen, lIndex, lIndex2, lOutLen2;
+                                ^
+src/util.c:170:17: style: The scope of the variable 'pTmp' can be reduced. [variableScope]
+ unsigned char *pTmp, ucTmp;
+                ^
+src/lz4/bench.c:114:0: style: The function 'BMK_SetBlocksize' is never used. [unusedFunction]
+
+^
+src/lz4/bench.c:119:0: style: The function 'BMK_SetNbIterations' is never used. [unusedFunction]
+
+^
+src/lz4/bench.c:233:0: style: The function 'BMK_benchFile' is never used. [unusedFunction]
+
+^
+src/lzma/LzFind.c:495:0: style: The function 'Bt3Zip_MatchFinder_GetMatches' is never used. [unusedFunction]
+
+^
+src/lzma/LzFind.c:660:0: style: The function 'Bt3Zip_MatchFinder_Skip' is never used. [unusedFunction]
+
+^
+src/lzma/LzFind.c:635:0: style: The function 'Hc3Zip_MatchFinder_GetMatches' is never used. [unusedFunction]
+
+^
+src/lzma/LzFind.c:721:0: style: The function 'Hc3Zip_MatchFinder_Skip' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaDec.c:947:0: style: The function 'LzmaDec_Allocate' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaDec.c:840:0: style: The function 'LzmaDec_DecodeToBuf' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaDec.c:892:0: style: The function 'LzmaDec_Free' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:79:0: style: The function 'LzmaEncProps_GetDictSize' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:2123:0: style: The function 'LzmaEnc_CodeOneMemBlock' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:2187:0: style: The function 'LzmaEnc_Encode' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:2117:0: style: The function 'LzmaEnc_GetCurBuf' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:2111:0: style: The function 'LzmaEnc_GetNumAvailableBytes' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:2050:0: style: The function 'LzmaEnc_PrepareForLzma2' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:368:0: style: The function 'LzmaEnc_RestoreState' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:342:0: style: The function 'LzmaEnc_SaveState' is never used. [unusedFunction]
+
+^
+src/lzma/LzmaEnc.c:2251:0: style: The function 'LzmaEncode' is never used. [unusedFunction]
+
+^
+src/lzma/LzFind.c:108:0: style: The function 'MatchFinder_ReadIfRequired' is never used. [unusedFunction]
+
+^
+src/util.c:141:0: style: The function 'SwapBytes' is never used. [unusedFunction]
+
+^
+src/lz4/lz4demo.c:115:0: style: The function 'badusage' is never used. [unusedFunction]
+
+^
+src/lz4/lz4demo.c:157:0: style: The function 'compress_file' is never used. [unusedFunction]
+
+^
+src/crc32.c:153:0: style: The function 'crc32buf' is never used. [unusedFunction]
+
+^
+src/lzo-lg.c:137:0: style: The function 'do_compress' is never used. [unusedFunction]
+
+^
+src/minigzip.c:456:0: style: The function 'file_compress' is never used. [unusedFunction]
+
+^
+src/minigzip.c:495:0: style: The function 'file_uncompress' is never used. [unusedFunction]
+
+^
+src/squashfs/mksquashfs.c:1532:0: style: The function 'get_checksum_mem_buffer' is never used. [unusedFunction]
+
+^
+src/util.c:66:0: style: The function 'get_ext' is never used. [unusedFunction]
+
+^
+src/minigzip.c:189:0: style: The function 'gzdopen' is never used. [unusedFunction]
+
+^
+src/squashfs/swap.c:95:0: style: The function 'inswap_le16_num' is never used. [unusedFunction]
+
+^
+src/squashfs/swap.c:96:0: style: The function 'inswap_le32_num' is never used. [unusedFunction]
+
+^
+src/squashfs/swap.c:96:0: style: The function 'inswap_le64_num' is never used. [unusedFunction]
+
+^
+src/mediatek.c:111:0: style: The function 'is_elf_mem' is never used. [unusedFunction]
+
+^
+src/jffs2/jffs2extract.cpp:97:0: style: The function 'lzma_alloc_workspace' is never used. [unusedFunction]
+
+^
+src/mfile.c:75:0: style: The function 'mfile_map_private' is never used. [unusedFunction]
+
+^
+src/mfile.c:218:0: style: The function 'mfopen_private' is never used. [unusedFunction]
+
+^
+src/mfile.c:125:0: style: The function 'mgetc' is never used. [unusedFunction]
+
+^
+src/mfile.c:131:0: style: The function 'mputc' is never used. [unusedFunction]
+
+^
+src/squashfs/mksquashfs.c:295:0: style: The function 'prep_exit' is never used. [unusedFunction]
+
+^
+src/util.c:111:0: style: The function 'print' is never used. [unusedFunction]
+
+^
+src/cramfs/uncramfs.c:125:0: style: The function 'printmode' is never used. [unusedFunction]
+
+^
+src/cramfs/uncramfs.c:113:0: style: The function 'printstats' is never used. [unusedFunction]
+
+^
+src/cramfs/uncramfs.c:198:0: style: The function 'printuidgid' is never used. [unusedFunction]
+
+^
+src/squashfs/unsquashfs.c:1674:0: style: The function 'process_extract_files' is never used. [unusedFunction]
+
+^
+src/squashfs/progressbar.c:198:0: style: The function 'progressbar_error' is never used. [unusedFunction]
+
+^
+src/squashfs/progressbar.c:214:0: style: The function 'progressbar_info' is never used. [unusedFunction]
+
+^
+src/squashfs/unsquashfs.c:658:0: style: The function 'read_data_block' is never used. [unusedFunction]
+
+^
+src/squashfs/swap.c:85:0: style: The function 'swap_le16_num' is never used. [unusedFunction]
+
+^
+src/squashfs/swap.c:86:0: style: The function 'swap_le32_num' is never used. [unusedFunction]
+
+^
+src/squashfs/swap.c:87:0: style: The function 'swap_le64_num' is never used. [unusedFunction]
+
+^
+src/symfile.c:146:0: style: The function 'symfile_addr_by_name' is never used. [unusedFunction]
+
+^
+src/symfile.c:158:0: style: The function 'symfile_n_symbols' is never used. [unusedFunction]
+
+^
+src/symfile.c:201:0: style: The function 'symfile_name_by_addr' is never used. [unusedFunction]
+
+^
+src/thpool.c:242:0: style: The function 'thpool_pause' is never used. [unusedFunction]
+
+^
+src/thpool.c:251:0: style: The function 'thpool_resume' is never used. [unusedFunction]
+
+^
+src/crc32.c:117:0: style: The function 'updateCRC32' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
